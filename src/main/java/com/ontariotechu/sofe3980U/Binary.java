@@ -119,6 +119,13 @@ public class Binary
 		return result;
 	}
 
+	/**
+		* Logical and on two binary variables.
+		*
+		* @param num1 The first operand object
+		* @param num2 The second operand object
+		* @return A binary variable with a value of <i>num1 AND num2</i>.
+	*/
 	public static Binary and(Binary num1, Binary num2){
 		//Get the indeces of the LSB for the strings
 		int len1 = num1.number.length() - 1;
@@ -143,6 +150,13 @@ public class Binary
 		return result;
 	}
 
+	/**
+		* Multiplication of two binary variables.
+		*
+		* @param num1 The first operand object
+		* @param num2 The second operand object
+		* @return A binary variable with a value of <i>num1 * num2</i>.
+	*/
 	public static Binary multiply(Binary num1, Binary num2){
 		int binToDec = 0;
 		for (int i = num1.number.length() - 1; i >= 0; i--){
