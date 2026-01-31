@@ -128,10 +128,10 @@ public class Binary
 		StringBuilder sb = new StringBuilder();
 
 		//Keep going until both strings are empty
-		while (len1 >= 0 || len2 >= 0){
+		while (len1 >= 0 && len2 >= 0){
 			//Get the current digits from the strings. If one string is empty, treat it as a 0.
-			char digit1 = (len1 >= 0) ? num1.number.charAt(len1--) : '0';
-			char digit2 = (len2 >= 0) ? num2.number.charAt(len2--) : '0';
+			char digit1 = num1.number.charAt(len1--);
+			char digit2 = num2.number.charAt(len2--);
 
 			//Logical and will be 1 if both are equal. 
 			char finalDigit = (digit1 == '1' && digit2 == '1') ? '1' : '0';
